@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas (Arrays)</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="container_todo_conteudo">
+    <header class="container_titulo">
+        <h1 class="titulo">📚 Aula Básica sobre Listas (Arrays) em <strong>JavaScript</strong></h1>
+        <div>
+            <h6>Fonte: Chat GPT</h6>
+        </div>
+    </header>
+    <main>
+        <section class="secao">
+            <h2 class="subtitulo">O que é uma Lista?</h2>
+            <div class="description">
+                <h3>
+                    No JavaScript, uma lista é chamada de array e é uma estrutura de dados usada para armazenar
+                    múltiplos
+                    valores em uma única variável.
+                </h3>
+            </div>
+        </section>
+        <section class="secao">
+            <h2 class="subtitulo"> 1️⃣ Criando um Array</h2>
+            <div class="description">
+                <h3>Em JavaScript, os arrays são declarados usando colchetes []:</h3>
+                <p>
+                    let numeros = [10, 20, 30, 40, 50]; <br>
+                    let frutas = ["maçã", "banana", "uva"]; <br>
+                    <br>
+                    console.log(numeros); // Saída: [10, 20, 30, 40, 50] <br>
+                    console.log(frutas); // Saída: ["maçã", "banana", "uva"] <br>
+                </p>
+            </div>
+        </section>
+
+        <section class="secao">
+            <h2 class="subtitulo">2️⃣ Acessando Elementos de um Array</h2>
+            <div class="description">
+                <h3>Os elementos do array são acessados pelo <strong>índice</strong>, que começa em <strong>0</strong>:
+                </h3>
+                <p>
+                    console.log(frutas[0]); // "maçã" <br>
+                    console.log(frutas[1]); // "banana" <br>
+                    console.log(frutas[2]); // "uva" <br>
+                </p>
+                <br>
+                <br>
+                <h3>Se tentarmos acessar um índice inexistente, retornará <i>undefined</i>:</h3>
+                <p>
+                    console.log(frutas[10]); // undefined <br>
+                </p>
+            </div>
+        </section>
+
+        <section class="secao">
+            <h2 class="subtitulo">3️⃣ Modificando Elementos do Array</h2>
+            <div class="description">
+                <h3>Podemos alterar elementos de um array diretamente pelo índice.</h3>
+                <p>
+                    frutas[1] = "laranja"; <br>
+                    console.log(frutas); // ["maçã", "laranja", "uva"] <br>
+                </p>
+            </div>
+        </section>
+
+        <section class="secao">
+            <h2 class="subtitulo">4️⃣ Tamanho do Array</h2>
+            <div class="description">
+                <h3>Para saber quantos elementos um array tem, usamos <strong>.length</strong>:</h3>
+                <p>
+                    console.log(frutas.length); // 3 <br>
+                </p>
+            </div>
+        </section>
+
+        <section class="secao">
+            <h2 class="subtitulo">5️⃣ Adicionando Elementos:</h2>
+            <br>
+            <h2>🔹 Adicionando no final (push)</h2>
+            <div class="description">
+                <p>
+                    frutas.push("manga"); <br>
+                    console.log(frutas); // ["maçã", "laranja", "uva", "manga"] <br>
+                </p>
+            </div>
+            <h2>🔹 Adicionando no início (unshift)</h2>
+            <div class="description">
+                <p>
+                    frutas.unshift("morango"); <br>
+                    console.log(frutas); // ["morango", "maçã", "laranja", "uva", "manga"] <br>
+                </p>
+            </div>
+            <h2>🔹 Adicionando em uma posição específica (splice)</h2>
+            <div class="description">
+                <p>
+                    frutas.splice(2, 0, "kiwi"); <br>
+                    console.log(frutas); // ["morango", "maçã", "kiwi", "laranja", "uva", "manga"] <br>
+                </p>
+                <h3>O primeiro número indica a posição, o segundo indica quantos elementos remover (0 = nenhum).</h3>
+            </div>
+        </section>
+
+        <section class="secao">
+            <h2 class="subtitulo">6️⃣ Removendo Elementos:</h2>
+            <br>
+            <h2>🔹 Removendo o último (pop)</h2>
+            <div class="description">
+                <p>
+                    frutas.pop(); <br>
+                    console.log(frutas); // ["morango", "maçã", "kiwi", "laranja", "uva"] <br>
+                </p>
+            </div>
+            <h2>🔹 Removendo o primeiro (shift)</h2>
+            <div class="description">
+                <p>
+                    frutas.shift(); <br>
+                    console.log(frutas); // ["maçã", "kiwi", "laranja", "uva"] <br>
+                </p>
+            </div>
+            <h2>🔹 Removendo de uma posição específica (splice)</h2>
+            <div class="description">
+                <p>
+                    frutas.splice(1, 1); // Remove 1 elemento a partir do índice 1 <br>
+                    console.log(frutas); // ["maçã", "laranja", "uva"] <br>
+                </p>
+                <h3>O primeiro número é o índice e o segundo número é a quantidade de elementos a remover.</h3>
+            </div>
+        </section>
+
+        <section class="secao">
+            <h2 class="subtitulo">7️⃣ Percorrendo Arrays:</h2>
+            <br>
+            <h2>🔹 Usando for tradicional</h2>
+            <div class="description">
+                <p>
+                    for (let i = 0; i < frutas.length; i++) { <br>
+                        ____console.log(frutas[i]); <br>
+                        ____} <br>
+                </p>
+            </div>
+            <h2>🔹 Usando forEach (método mais moderno)</h2>
+            <div class="description">
+                <p>
+                    frutas.forEach(fruta => console.log(fruta)); <br>
+                </p>
+            </div>
+            <h2>🔹 Usando for...of (outra forma moderna)</h2>
+            <div class="description">
+                <p>
+                    for (let fruta of frutas) { <br>
+                    _____console.log(fruta);
+                    } <br>
+                </p>
+            </div>
+        </section>
+
+        <section class="secao">
+            <h2 class="subtitulo">8️⃣ Outras Operações Comuns:</h2>
+            <br>
+            <h2>🔹 Ordenar elementos (sort)</h2>
+            <div class="description">
+                <p>
+                    frutas.sort(); <br>
+                    console.log(frutas); // ["laranja", "maçã", "uva"] <br>
+                </p>
+            </div>
+            <h2>🔹 Reverter a ordem (reverse)</h2>
+            <div class="description">
+                <p>
+                    frutas.reverse(); <br>
+                    console.log(frutas); // ["uva", "maçã", "laranja"] <br>
+                </p>
+            </div>
+            <h2>🔹 Filtrar elementos (filter)</h2>
+            <div class="description">
+                <p>
+                    let numeros = [10, 20, 30, 40, 50]; <br>
+                    let maioresQue25 = numeros.filter(num => num > 25); <br>
+                    console.log(maioresQue25); // [30, 40, 50] <br>
+                </p>
+            </div>
+            <h2>🔹 Transformar elementos (map)</h2>
+            <div class="description">
+                <p>
+                    let dobrados = numeros.map(num => num * 2); <br>
+                    console.log(dobrados); // [20, 40, 60, 80, 100] <br>
+                </p>
+            </div>
+        </section>
+
+        <section class="secao">
+            <h2 class="subtitulo">🔥 Resumo Rápido</h2>
+            <p>
+                ✔️ Arrays armazenam múltiplos valores. <br>
+                ✔️ Os elementos são acessados por índices (começando do 0). <br>
+                ✔️ Podemos adicionar, remover e modificar elementos. <br>
+                ✔️ Métodos úteis:
+            </p>
+            <p>
+                .push() → Adiciona no final <br>
+                .pop() → Remove o último <br>
+                .unshift() → Adiciona no início <br>
+                .shift() → Remove o primeiro <br>
+                .splice() → Adiciona ou remove em posições específicas <br>
+                .forEach() → Percorre a lista <br>
+                .filter() → Filtra valores <br>
+                .map() → Modifica elementos <br>
+            </p>
+        </section>
+
+        <section class="secao">
+            <h2 class="subtitulo">Exercícios sobre Arrays</h2>
+            <br>
+            <a class="subtitulo" href="../Exercicios/Exercicios_sobre_Arrays/exercicios_arrays.html">Exercícios sobre
+                Arrays</a>
+            <br>
+            <br>
+        </section>
+
+    </main>
+
+    <footer>
+        &copy; 2025 Giovani Teodoro Martins. Todos os direitos reservados.
+    </footer>
+    <script src="./lista_arrays.js"></script>
+</body>
+
+</html>

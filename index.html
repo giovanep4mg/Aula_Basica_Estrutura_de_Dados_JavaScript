@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula Básica sobre Estrutura de Dados</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header class="container_titulo">
+        <h1 class="titulo">📌 Aula Básica sobre Estrutura de Dados</h1>
+    </header>
+
+    <section class="container_menu">
+        <h2 class="titulo_menu">Menu</h2>
+        <a class="subtitulo_menu" href="#oqueeestruturadedado">O que é <br> Estrutura <br> de Dados?</a>
+        <a class="subtitulo_menu" href="#arrays">Arrays</a>
+        <a class="subtitulo_menu" href="#listasLigadas">Listas Ligadas</a>
+        <a class="subtitulo_menu" href="#pilhas">Pilhas</a>
+        <a class="subtitulo_menu" href="#tabelas">Tabelas Hash</a>
+        <a class="subtitulo_menu" href="#conclusao">Conclusão</a>
+    </section>
+
+    <section class="container_todo_conteudo">
+
+        <section class="secao" id="oqueeestruturadedado">
+            <h2 class="subtitulo">O que é Estrutura de Dados?</h2>
+            <p>
+                Estrutura de dados é uma forma organizada de armazenar e gerenciar informações na memória do computador.
+                <br>
+                Elas são essenciais para tornar os algoritmos eficientes e resolver problemas de forma otimizada.
+            </p>
+        </section>
+        <section class="secao" id="arrays">
+            <h2 class="subtitulo">📌 Tipos de Estruturas de Dados</h2>
+            <div class="container_link">
+                <h3>1️⃣ Arrays (Vetores e Matrizes)</h3> <a href="./Aula_Lista_Array/Listas_(Arrays).html"> Aula sobre
+                    Arrays/Listas!</a>
+            </div>
+            <p>
+                ✅ São listas de elementos armazenados na memória. <br>
+                ✅ Cada elemento tem um índice (posição). <br>
+                ✅ Pode ser unidimensional (vetor) ou multidimensional (matriz). <br>
+            </p>
+            <h5>Exemplo em Javascript:</h5>
+            <p>
+                let numeros = [10, 20, 30, 40]; <br>
+                console.log(numeros[2]); // 30 <br>
+            </p>
+            <h3>🔹 Aplicação: Armazenar listas de dados, como notas de alunos ou nomes de produtos.</h3>
+        </section>
+
+        <section class="secao" id="listasLigadas">
+            <div class="container_link">
+                <h2 class="subtitulo">2️⃣ Listas Ligadas (Linked Lists)</h2> <a href="link">Para saber mais clique
+                    aqui!</a>
+            </div>
+            <p>
+                ✅ Diferente dos arrays, os elementos não ocupam posições fixas na memória. <br>
+                ✅ Cada elemento (nó) contém um valor e um ponteiro para o próximo nó. <br>
+            </p>
+            <h5>Exemplo (css):</h5>
+            <p>
+                [10] → [20] → [30] → [40] → null
+            </p>
+            <h3>🔹 Aplicação: Implementação de filas e pilhas.</h3>
+        </section>
+
+        <section class="secao" id="pilhas">
+            <div class="container_link">
+                <h2 class="subtitulo">3️⃣ Pilhas (Stacks) - LIFO</h2> <a href="http://">link</a>
+            </div>
+            <p>
+                ✅ LIFO (Last In, First Out) → O último a entrar é o primeiro a sair. <br>
+                ✅ Imagina uma pilha de pratos: só dá para tirar o de cima primeiro! <br>
+            </p>
+            <h5>Exemplo em Javascript:</h5>
+            <p>
+                let pilha = []; <br>
+                pilha.push(10); // Adiciona 10 <br>
+                pilha.push(20); // Adiciona 20 <br>
+                console.log(pilha.pop()); // Remove 20 (último a entrar, primeiro a sair) <br>
+            </p>
+            <h3>🔹 Aplicação: Desfazer ações em editores de texto, chamadas de funções recursivas.</h3>
+        </section>
+
+        <section class="secao" id="filas">
+            <div class="container_link">
+                <h2 class="subtitulo">4️⃣ Filas (Queues) - FIFO</h2> <a href="http://">link</a>
+            </div>
+            <p>
+                ✅ FIFO (First In, First Out) → O primeiro a entrar é o primeiro a sair. <br>
+                ✅ Funciona como uma fila de banco: o primeiro a chegar é o primeiro atendido. <br>
+            </p>
+            <h5>Exemplo em Javascript:</h5>
+            <p>
+                let fila = []; <br>
+                fila.push("A"); // Entra A <br>
+                fila.push("B"); // Entra B <br>
+                console.log(fila.shift()); // Sai A (primeiro a entrar, primeiro a sair) <br>
+            </p>
+            <h3>🔹 Aplicação: Impressoras, processamento de tarefas em sistemas operacionais.</h3>
+        </section>
+
+        <section class="secao" id="tabelas">
+            <div class="container_link">
+                <h2 class="subtitulo">5️⃣ Tabelas Hash (Hash Tables ou Dicionários)</h2> <a href="http://">link</a>
+            </div>
+            <p>
+                ✅ Usa <strong>chaves e valores</strong> para armazenar dados de forma eficiente. <br>
+                ✅ Permite buscas rápidas. <br>
+            </p>
+            <h5>Exemplo em Javascript:</h5>
+            <p>
+                let pessoa = { nome: "João", idade: 30, cidade: "São Paulo" }; <br>
+                console.log(pessoa["idade"]); // 30 <br>
+            </p>
+            <h3>🔹 Aplicação: Bancos de dados, cache de informações.</h3>
+        </section>
+
+        <section class="secao" id="conclusao">
+            <h2 class="subtitulo">Conclusão:</h2>
+            <p>
+                ✅ Arrays – Lista de elementos com índice. <br>
+                ✅ Listas Ligadas – Elementos encadeados dinamicamente. <br>
+                ✅ Pilhas – Último a entrar, primeiro a sair (LIFO). <br>
+                ✅ Filas – Primeiro a entrar, primeiro a sair (FIFO). <br>
+                ✅ Tabelas Hash – Estruturas rápidas para buscas. <br>
+            </p>
+            <h3>🔹 Aplicação: Bancos de dados, cache de informações.</h3>
+        </section>
+    </section>
+
+    <br>
+
+    <footer>
+        &copy; 2025 Giovani Teodoro Martins. Todos os direitos reservados.
+    </footer>
+</body>
+
+</html>
