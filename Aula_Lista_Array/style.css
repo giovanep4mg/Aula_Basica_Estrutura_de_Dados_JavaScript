@@ -72,6 +72,15 @@ p{
     width: max-content;
 }
 
+.container_imagem{
+    width: -webkit-fill-available;
+    border: 1px solid black;
+}
+
+.imagem{
+    width: -webkit-fill-available;
+}
+
 footer{
     background-color: #222;
     color: white;

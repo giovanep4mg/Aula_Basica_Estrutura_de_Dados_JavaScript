@@ -217,13 +217,100 @@
 
         <section class="secao">
             <h2 class="subtitulo">📌 O que são Matrizes?</h2>
-            <p>
-                Uma matriz é um array multidimensional, geralmente com duas dimensões (linhas e colunas), como uma
-                tabela ou planilha.
-            </p>
-            <strong>Exemplo de uma matriz 3x3 (3 linhas e 3 colunas):</strong>
-            <div>
-                <img src="" alt="">
+            <div class="description">
+                <p>
+                    Uma matriz é um array multidimensional, geralmente com duas dimensões (linhas e colunas), como uma
+                    tabela ou planilha.
+                </p>
+                <div class="container_imagem">
+                    <img class="imagem" src="./imagens/print-matrizes-coluna-linha.PNG"
+                        alt="Imagem de uma matriz, com colunas e linhas">
+                </div>
+                <h3>Em <strong>JavaScript</strong>, podemos representar essa matriz assim:</h3>
+                <p>
+                    let matriz = [ <br>
+                    _ [1, 2, 3], // Linha 0 <br>
+                    _ [4, 5, 6], // Linha 1 <br>
+                    _ [7, 8, 9] // Linha 2 <br>
+                    ]; <br>
+                    <br>
+                    console.log(matriz[1][2]); // Acessa o número 6 (Linha 1, Coluna 2) <br>
+                </p>
+            </div>
+        </section>
+
+        <section class="secao">
+            <h2 class="subtitulo">📌 Como Criar Matrizes em JavaScript</h2>
+            <h3>Podemos criar matrizes de várias formas:</h3>
+            <br>
+            <h2>1️⃣ Matriz Estática (Definida Manualmente)</h2>
+            <div class="description">
+                <p>
+                    Criamos uma matriz e já definimos seus valores: <br>
+                </p>
+                <p>
+                    let matriz = [ <br>
+                    _ [10, 20, 30], <br>
+                    _ [40, 50, 60], <br>
+                    _ [70, 80, 90] <br>
+                    _]; <br>
+                    <br>
+                    console.log(matriz[2][1]); // Retorna 80 (Linha 2, Coluna 1) <br>
+                </p>
+            </div>
+            <h2>2️⃣ Matriz Dinâmica (Criada com for)</h2>
+            <div class="description">
+                <p>
+                    Podemos preencher uma matriz dinamicamente: <br>
+                </p>
+                <p>
+                    let matrizDinamica = []; <br>
+                    <br>
+                    let linhas = 3, colunas = 3; <br>
+                    <br>
+                    for (let i = 0; i < linhas; i++) { <br>
+                        _ matrizDinamica[i]=[]; // Criando cada linha <br>
+                        for(let j=0; j < colunas; j++) { <br>
+                            _ matrizDinamica[i][j]=i + j; // Exemplo de preenchimento } }
+                            <br>
+                            console.log(matrizDinamica); <br>
+                </p>
+            </div>
+            <h2>📌 Como Percorrer Matrizes</h2>
+            <div class="description">
+                <p>
+                    Usamos dois loops for: <br>
+                    🔹 O primeiro for percorre as linhas. <br>
+                    🔹 O segundo for percorre as colunas dentro de cada linha. <br>
+                </p>
+                <h3>Exemplo de Percorrer uma Matriz:</h3> <br>
+                <div class="container_imagem">
+                    <img class="imagem" src="./imagens/print-matrizes-2.PNG"
+                        alt="Print do código, em JavaScript de como percorrer uma matriz.">
+                </div>
+                <h3>📌 Saída no console:</h3> <br>
+                <div class="container_imagem">
+                    <img class="imagem" src="./imagens/print-matrizes-3-saida.PNG"
+                        alt="Print do código, em JavaScript, mostrando a saida do código depois de percorrer uma matriz.">
+                </div>
+            </div>
+        </section>
+
+        <section class="secao">
+            <h2 class="subtitulo">📌 Exercícios Práticos</h2>
+            <div class="description">
+                <p>
+                    💡 Desafio 1: Criar uma matriz 3x3, preenchê-la com números informados pelo usuário e exibir a
+                    matriz formatada no
+                    console.
+                </p>
+                <p>
+                    💡 Desafio 2: Criar uma matriz 5x5 onde os elementos da diagonal principal sejam 1 e o restante 0
+                    (Matriz Identidade).
+                </p>
+                <p>
+                    💡 Desafio 3: Somar todos os elementos de uma matriz 4x4 e exibir o resultado no console.
+                </p>
             </div>
         </section>
 
