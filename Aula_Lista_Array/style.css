@@ -64,6 +64,14 @@ p{
     margin-top: 2vw;
 }
 
+.coluna_matrizes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    width: max-content;
+}
+
 footer{
     background-color: #222;
     color: white;

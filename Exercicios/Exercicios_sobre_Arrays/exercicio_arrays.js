@@ -42,34 +42,40 @@ function alternaExercicio(idDiv, botao) {
  */
 
 
-// cria uma lista vazia com o nome de cidades
-let cidades = [];
 
-// Enquanto o valor de "i" for menor que 3, vai repetir essa ação, até que o valor de "i" seja maior que 3.
-for (let i = 0; i < 3; i++){
+
+function executar() {
+    // cria uma lista vazia, que vai guarda os nomes das cidades que serão adicionadas
+    let cidades = [];
     
-    // Pede ao usuário para adicionar um nome, e salva na posição "i" dentro da lista cidades
-    cidades[i] = prompt("Digite o nome de uma cidade: ");
+    // Enquanto o valor de "i" for menor que 3, vai repetir essa ação, até que o valor de "i" seja maior que 3.
+    for (let i = 0; i < 3; i++){
     
-}
-
-// Exibir no console os nomes das cidades adicionadas pelo usuário
-console.log("cidades adicionadas pelo usuário: ", cidades);
-
-// salva a resposta do usuário, dentro da variável "resposta"...
-let resposta = prompt("Deseja adicionar mais alguma cidades: Sim ou Não ?");
-
-// Verifica, se a resposta for "Sim" ou "sim", vai...
-if (resposta === "Sim" || resposta === 'sim') {
+        // Pede ao usuário para adicionar um nome, e salva na posição "i" dentro da lista cidades
+        cidades[i] = prompt("Digite o nome de uma cidade: ");
     
-    // adicionar dentro da lista "cidades" um novo nome,Pedindo ao usuário para adicionar o nome
-    cidades.push(prompt("Digite o nome da cidades: "));
-    console.log("Adcionando outra cidades: ", cidades);
+    }
+    // Exibir no console os nomes das cidades adicionadas pelo usuário
+    console.log("cidades adicionadas pelo usuário: ", cidades);
 
-    alert("Lista final das cidades adicionadas: \n ", cidades);
+    // salva a resposta do usuário, dentro da variável "resposta"...
+    let resposta = prompt("Deseja adicionar mais alguma cidades: Sim ou Não ?");
+
+    // Verifica, se a resposta for "sim", vai...
+    // Uso de toLowerCase() → Agora, aceita variações de "Sim", como "sim", "SIM", "sIm", etc.
+    if (resposta.toLowerCase() === 'sim') {
+        
+        // adicionar dentro da lista "cidades" um novo nome,Pedindo ao usuário para adicionar o nome
+        cidades.push(prompt("Digite o nome da cidade: "));
+
+        //Uso de .join("\n") → Mostra a lista corretamente no alert(), separando os nomes por linha.
+        alert(`Lista final das cidades adicionadas:\n${cidades.join("\n")}`);
+
+    } else {
+
+        // Exibir mensagem, mostrando as cidades adicionadas pelo usuário
+        //Uso de .join("\n") → Mostra a lista corretamente no alert(), separando os nomes por linha.
+        alert(`Lista final das cidades adicionadas:\n${cidades.join("\n")}`);
+    }
     
-} else {
-
-    alert("Lista final das cidades adicionadas: \n ", cidades);
-    console.log(`Lista final das cidades adicionadas: ${cidades}`);
 }
