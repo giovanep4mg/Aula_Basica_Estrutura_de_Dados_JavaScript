@@ -2,6 +2,7 @@
 const lista = [];
 
 
+
 function adicionarProduto() {
 
     // Pega valor do que foi digitado pelo usuário e salva na var "produto"
@@ -22,52 +23,43 @@ function adicionarProduto() {
         
         // Pega o que foi digitado e salva dentro do array
         lista.push(produto);
+
+        // coloca a lista em ordem alfabética
+        lista.sort();
         console.log("Lista: ", lista);
-        
-        // limpa o input
+
+        // Limpa a lista antes de exibir os itens ordenados
+        document.getElementById("listaProdutos").innerHTML = "";
+
+        // Atualiza a exibição da lista
+        lista.forEach(item => {
+
+            // criando o elemento/tag "li"
+            let li = document.createElement('li');
+            // Adiciona o item dentro da tag "li"
+            li.textContent = item;
+
+            // Criando o botão 
+            let botaoRemover = document.createElement('button');
+            // Adiciona essa figura no botão
+            botaoRemover.textContent = '❌';
+            // Adiciona a classe no botão
+            botaoRemover.classList.add('botao-remover');
+
+            // chama a função removerProduto, passando os parâmetros
+            botaoRemover.onclick = function () {
+                // Passa o item e a tag onde está o item
+                removerProduto(item, li);
+            };
+
+            // Adiciona o botão dentro da tag "li"
+            li.appendChild(botaoRemover);
+            // Adiciona a tag "li com o botão" dentro do html, na tag "ul"
+            document.getElementById("listaProdutos").appendChild(li);
+        });
+
+        // limpa o campo de entrada onde o usuário adiciona os produtos
         document.getElementById("entradaProduto").value = '';
-
-        // Criando o elemento "li" => <li></li>
-        let li = document.createElement('li');
-
-        // Pega o que foi escrito pelo usuário, e coloca dentro do elemento "li" => <li> ***  </li>
-        li.textContent = produto;
-
-        // criando o botão remover
-        // Cria elemento "button" , salva na var "botaoRemover" => <button></button>
-        let botaoRemover = document.createElement('button');
-        // coloca esse desenho, no botao que foi criado => <button> ❌ </button>
-        botaoRemover.textContent = '❌';
-
-        // Adicionando a classe ao botão
-        botaoRemover.classList.add('botao-remover');
-
-        /**
-         * // Adicionando estilos ao botão
-        botaoRemover.style.marginLeft = '65%';
-        botaoRemover.style.width = '10%'; // Aumenta a largura do botão
-        botaoRemover.style.fontSize = '5vw'; // Aumenta o tamanho do ícone
-        botaoRemover.style.cursor = 'pointer';
-        botaoRemover.style.border = 'none'; // Remove a borda para um visual mais limpo
-        botaoRemover.style.background = 'transparent'; // Fundo transparente
-        botaoRemover.style.color = 'red'; // Deixa o ícone vermelho para destacar
-         */
-         
-
-        // Adiciona uma função, dentro do botão remover, que recebe dois parâmetros "produto" e "li"
-        // =>> <button onclick="removerProduto(produto, li)"> ❌ </button>
-        botaoRemover.onclick = function () {
-
-            // chama a função e passa os parÂmetros
-            removerProduto(produto, li);
-        };
-
-        // adiciona o botão dentro do elemento "li"
-        li.appendChild(botaoRemover);
-
-        // Adiciona o "li" na página html, no elemento "ul"
-        document.getElementById("listaProdutos").appendChild(li);
-
 
     } else {
         // Exibe essa mensagem 
@@ -87,6 +79,8 @@ function removerProduto(produto, elemento) {
         
         // remove 1 item da lista na posição index.
         lista.splice(index, 1);
+
+        
     }
     // Exibe essa mensagem no console
     console.log("Lista após exclusão: ", lista);
