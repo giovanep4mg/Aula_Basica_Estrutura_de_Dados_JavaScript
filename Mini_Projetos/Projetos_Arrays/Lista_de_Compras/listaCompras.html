@@ -9,22 +9,24 @@
 </head>
 
 <body>
-    <header>
-        <h1>Lista de Compras</h1>
-    </header>
-    <main>
-        <section>
-            <h2>Adicionar produto:</h2>
-            <input class="entradaProduto" type="text" id="entradaProduto">
-            <button type="button" onclick="adicionarProduto()">Adicionar</button>
-        </section>
-        <section>
-            <ul id="listaProdutos">
-            </ul>
+    <main class="todo_conteudo">
+        <header class="container_titulo">
+            <h1 class="titulo">Lista de Compras</h1>
+        </header>
+        <section class="container_adicionar_exibir">
+            <div class="container_adicionar">
+                <h2 class="subtitulo">Adicionar produto:</h2>
+                <input class="entradaProduto" type="text" id="entradaProduto">
+                <button class="btn_add" type="button" onclick="adicionarProduto()">Adicionar</button>
+            </div>
+            <div class="container_lista_exibir">
+                <ul class="item_lista" id="listaProdutos">
+                </ul>
+            </div>
         </section>
     </main>
     <footer>
-
+        &copy;Giovani Teodoro Martins 2025.Todos os direitos reeservados.
     </footer>
     <script src="./javascript.js"></script>
 </body>

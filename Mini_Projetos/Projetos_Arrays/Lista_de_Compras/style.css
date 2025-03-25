@@ -1,0 +1,240 @@
+*{
+   padding: 0;
+   margin: 0;
+}
+
+body{
+    box-sizing: border-box;
+    background-color: rgba(0, 255, 255, 0.63);
+    height: 100%;
+}
+
+
+@media screen and (max-width: 2561px) {
+    
+    .todo_conteudo{
+        border: 1px solid black;
+        width: 75%;
+        margin-top: 2%;
+        margin-left: 13%;
+        margin-bottom: 7%;
+        background-color: rgba(245, 245, 220, 0.726);
+    }
+
+    .container_titulo{
+        width: -webkit-fill-available;
+    }
+
+    .titulo{
+        font-family: sans-serif;
+        font-size: 8vw;
+        padding: 1%;
+        text-align: center;
+    }
+
+    .container_adicionar_exibir{
+        width: -webkit-fill-available;
+    }
+
+    .container_adicionar{
+        width: -webkit-fill-available;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .subtitulo{
+        font-family: serif;
+        font-size: 6vw;
+        padding: 1%;
+    }
+
+    .entradaProduto{
+        font-family: serif;
+        font-size: 5.5vw;
+        width: -webkit-fill-available;
+        margin-left: 5%;
+        margin-right: 5%;
+        padding: 1%;
+        border: 1px solid black;
+    }
+
+    .btn_add{
+        font-size: 4.5vw;
+        margin-top: 1%;
+        width: 30%;
+        background-color: antiquewhite;
+        color: black;
+        cursor: pointer;
+    }
+    .btn_add:hover{
+        background-color: aqua;
+        color: blue;
+    }
+
+    .container_lista_exibir{
+        width: -webkit-fill-available;
+        display: flex;
+        justify-content: center;
+    }
+
+    .item_lista{
+        margin-top: 2%;
+        width: -webkit-fill-available;
+    }
+
+    li{
+        font-family: sans-serif;
+        font-size: 5vw;
+        list-style: none;
+        width: 90%;
+        border: 1px solid;
+        margin-left: 5%;
+        margin-top: 1%;
+        padding: 1%;
+        margin-bottom: 1%;
+        background-color: #944ed557;
+    }
+
+    .botao-remover {
+        margin-left: 65%;
+        width: 10vw;
+        height: 4vh;
+        font-size: 4vw;
+        cursor: pointer;
+        border: none;
+        background: transparent;
+        color: red;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+    .botao-remover:hover {
+        transform: scale(1.2); /* Aumenta um pouco ao passar o mouse */
+        opacity: 0.8;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #222;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        font-size: 2.5vw;
+    }
+}
+
+@media screen and (max-width: 1441px) {
+
+    footer {
+        font-size: 2vw;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+
+    .titulo{
+        font-size: 6vw;
+    }
+
+    .subtitulo{
+        font-size: 5vw;
+    }
+
+    .entradaProduto{
+        font-size: 4.5vw;
+    }
+
+    .btn_add{
+        font-size: 3.5vw;
+        width: 25%;
+    }
+
+    li{
+        font-size: 4vw;
+    }
+
+    .botao_remover{
+        font-size: 3vw;
+    }
+
+    footer {
+        font-size: 2vw;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .todo_conteudo{
+        width: 85%;
+        margin-top: 2%;
+        margin-left: 8%;
+    }
+
+    .titulo{
+        font-size: 9vw;
+    }
+
+    .subtitulo{
+        font-size: 7vw;
+    }
+
+    .entradaProduto{
+        font-size: 6.5vw;
+    }
+
+    .btn_add{
+        font-size: 5vw;
+        width: 30%;
+    }
+
+    li{
+        font-size: 6vw;
+    }
+
+    .botao_remover{
+        font-size: 5vw;
+    }
+
+    footer {
+        font-size: 3vw;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 321px) {
+    .todo_conteudo{
+        width: 96%;
+        margin-top: 2%;
+        margin-left: 2%;
+    }
+
+    .titulo{
+        font-size: 10vw;
+    }
+
+    .subtitulo{
+        font-size: 9vw;
+    }
+
+    .entradaProduto{
+        font-size: 7.5vw;
+    }
+
+    .btn_add{
+        font-size: 6vw;
+        width: 30%;
+    }
+
+    li{
+        font-size: 7vw;
+    }
+
+    .botao_remover{
+        font-size: 6vw;
+    }
+
+    footer {
+        font-size: 3.5vw;
+        padding: 8px;
+    }
+}
