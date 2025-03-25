@@ -1,0 +1,85 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    box-sizing: border-box;
+    background-color: aquamarine;
+}
+
+@media screen and (max-width: 2561px) {
+
+    h1{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 5vw;
+        text-align: center;
+        margin-top: 1%;
+    }
+
+    .conteudo{
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 2%;
+        background-color: beige;
+        padding: 1%;
+        border: 1px solid black;
+    }
+
+    h2{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 2.5vw;
+    }
+
+    h4{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 2.5vw;
+    }
+
+    strong{
+        font-size: 2vw;
+        color: red;
+    }
+
+    .container_inserir_botao{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+    }
+
+    #entrada_numero_usuario{
+        font-size: 2vw;
+        text-align: center;
+        width: 8%;
+        border: 1px solid black;
+        padding: 0.5rem;
+    }
+
+    .btn_gerar_numero{
+        font-size: 4vw;
+        background-color: aqua;
+        color: blue;
+        width: 22%;
+        margin-top: 2%;
+    }
+
+    #maiorNumero, #menorNumero {
+        font-size: 4vw;
+        text-align: center;
+        margin-top: 4%;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #222;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        font-size: 2.5vw;
+    }
+    
+}

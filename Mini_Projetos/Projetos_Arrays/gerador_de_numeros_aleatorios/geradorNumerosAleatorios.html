@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de números aleatórios</title>
+    <link rel="stylesheet" href="./geradorNumerosAleatorios.css">
+</head>
+
+<body>
+    <h1>Gerador de números aleatórios</h1>
+    <section class="conteudo">
+        <h2>Coloque o valor de quantos números você deseja que seja gerado:</h2> <br>
+        <h4>
+            <strong>Exemplo:</strong> <br>
+            Se você escrever 10, então irá gerar números aleatóriosde 0 a 10
+        </h4> <br>
+        <br>
+        <div class="container_inserir_botao">
+            <input type="text" id="entrada_numero_usuario">
+            <button class="btn_gerar_numero" type="button" onclick="gerarNumero()">Executar</button>
+        </div>
+        <div>
+            <p id="maiorNumero"></p>
+            <br>
+            <p id="menorNumero"></p>
+        </div>
+    </section>
+    <footer>
+        &copy;Giovani Teodoro Martins 2025.Todos os direitos reservados.
+    </footer>
+    <script src="./geradorNumerosAleatorios.js"></script>
+</body>
+
+</html>
