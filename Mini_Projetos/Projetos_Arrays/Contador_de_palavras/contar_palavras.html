@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de palavras</title>
+    <link rel="stylesheet" href="./contar_palavras.css">
+</head>
+
+<body>
+
+    <main>
+        <h1>Contador de Palavras</h1>
+
+        <section id="tela_1">
+            <h2>Digite um texto:</h2>
+            <div class="container_entrada_botao">
+                <input type="text" id="textoEntrada">
+                <button type="button" onclick="contarPalavras()">Contar</button>
+            </div>
+        </section>
+        <section style="display: none;" id="tela_2">
+            <h2>O texto:</h2> <br>
+            <div>
+                <p>
+                    <span id="resultado"></span>
+                </p>
+            </div>
+            <br>
+            <br>
+            <div>
+                <p>
+                    Ele tem <span id="resultado2"></span> palavras.
+                </p>
+            </div>
+            <br>
+            <div class="container_entrada_botao">
+                <button onclick="window.location.reload();">Reiniciar</button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        &copy;Giovani Teodoro Martins 2025.Todos os direitos reservados.
+    </footer>
+
+    <script src="./contar_palavras.js"></script>
+</body>
+
+</html>
