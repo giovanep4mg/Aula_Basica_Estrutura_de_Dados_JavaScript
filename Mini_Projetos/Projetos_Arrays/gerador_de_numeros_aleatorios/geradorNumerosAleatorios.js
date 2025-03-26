@@ -2,28 +2,14 @@
 // Função que irá gerar os números aleatórios
 function gerarNumero() {
 
-    // pega o que o usuário digitou, e salva na var "numerUsuario"
-    let numeroUsuario = document.getElementById("entrada_numero_usuario").value;
-
-    // Verifica se o campo está vazio ou não
-    if (isNaN(numeroUsuario)) {
-        // Se estiver vazio, exibirá esse alerta na página
-        alert("Campo vazio, Digite um número! ")
-        // retorna
-        return;
-    }
-
-    // Verifica, se a variável não está vazia,...
-    if (numeroUsuario !== '') {
-
-        // cria um array, vazia com o nome de "listaNumeros"
-        const listaNumeros = [];
+    //
+    let listaNumeros = [];
 
         // Enquanto i for menor que o total da var, vai...
-        for (let i = 0; i < numeroUsuario; i++){
+        for (let i = 0; i < 10; i++){
 
             // Gera um número aleatório, de 0 até o valor da var "numeroAleatorio"
-            let numeroAleatorio = Math.floor(Math.random() * numeroUsuario);
+            let numeroAleatorio = Math.floor(Math.random() * 100 + 1);
 
             // Adiciona dentro do array, os números que está sendo gerado
             listaNumeros.push(numeroAleatorio);
@@ -41,12 +27,6 @@ function gerarNumero() {
 
         // Adiciona na página, o valor do menor número que foi salvo
         document.getElementById("menorNumero").innerHTML = `Menor número: ${menorNumero}`;
-
-    } else {
-        
-        // Exibirá essa mensagem, caso tenha digitado algo errado!
-        alert("Digite um número! ")
-    }
 
 }
 
