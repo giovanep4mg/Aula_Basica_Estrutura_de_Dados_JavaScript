@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas ligadas (Linked_List)</title>
+    <link rel="stylesheet" href="./listas_ligadas.css">
+</head>
+
+<body class="container_todo_conteudo">
+    <header class="container_titulo">
+        <h1 class="titulo">🚀 Aula Básica sobre Listas Ligadas (Linked Lists) em <strong>JavaScript</strong></h1>
+        <div>
+            <h6>Fonte: Chat GPT</h6>
+        </div>
+    </header>
+    <main>
+        <section class="secao">
+            <h2 class="subtitulo">📌 O que é uma Lista Ligada?</h2>
+            <div class="description">
+                <h3>
+                    Uma Lista Ligada (Linked List) é uma estrutura de dados linear composta por nós (nodes). <br>
+                    Cada nó contém dois elementos principais: <br>
+                    <br>
+                    <ol>
+                        <li><strong>Valor (ou Dado)</strong>- A informação armazenada no nó.</li>
+                        <li><strong>Referência (ou Ponteiro)</strong>- Um link que aponta para o próximo nó na lista.
+                        </li>
+                    </ol>
+                    <br>
+                    Diferente de arrays, que armazenam elementos em posições contíguas na memória, <br>
+                    as listas ligadas armazenam os elementos de forma dinâmica, alocando memória conforme necessário.
+                    <br>
+                </h3>
+            </div>
+        </section>
+        <section class="secao">
+            <h2 class="subtitulo">🎯 Tipos de Listas Ligadas</h2>
+            <div class="description">
+                <h3>
+                    <ol>
+                        <li><strong>Lista Simplesmente Ligada</strong> - Cada nó aponta para o próximo nó.</li>
+                        <li><strong>Lista Duplamente Ligada</strong> - Cada nó aponta para o próximo e o anterior.</li>
+                        <li><strong>Lista Circular</strong> - O último nó aponta de volta para o primeiro.</li>
+                    </ol>
+                </h3>
+            </div>
+        </section>
+
+        <section class="secao">
+            <h2 class="subtitulo">🛠️ Implementação de uma Lista Simplesmente Ligada em JavaScript</h2>
+            <div class="description">
+                <h3>
+                    Vamos criar uma <strong>lista simplesmente ligada</strong> básica, implementando os seguintes
+                    métodos: <br>
+                </h3>
+                <p>
+                    append(valor): Adiciona um nó no final. <br>
+                    prepend(valor): Adiciona um nó no início. <br>
+                    delete(valor): Remove um nó específico. <br>
+                    print(): Exibe os elementos da lista. <br>
+                </p>
+                <br>
+            </div>
+        </section>
+
+        <section class="secao">
+            <h2 class="subtitulo">1️⃣ Criando um Nó (Node)</h2>
+            <div class="description">
+                <h3>
+                    Cada nó terá um valor e um ponteiro para o próximo nó. <br>
+                </h3>
+                <div>
+                    <img src="./imagens/print-codigo.PNG" alt="Print do código feito em javascript.">
+                </div>
+                <br>
+            </div>
+        </section>
+
+        <section class="secao">
+            <h2 class="subtitulo">2️⃣ Criando a Lista Ligada</h2>
+            <div class="description">
+                <h3>
+                    Agora, vamos implementar a classe LinkedList. <br>
+                </h3>
+                <div>
+                    <img src="./imagens/print-codigo-imprementando.PNG" alt="Print do código usando o javascript.">
+                    <img src="./imagens/print-codigo-imprementando-2.PNG" alt="Print do código usando o javascript.">
+                </div>
+                <br>
+            </div>
+        </section>
+
+        <section class="secao">
+            <h2 class="subtitulo">🚀 Testando a Lista Ligada</h2>
+            <div class="description">
+                <h3>
+                    Agora, vamos criar uma instância da LinkedList e executar alguns métodos. <br>
+                </h3>
+                <div>
+                    <img src="./imagens/print-codigo-testando.PNG" alt="Print do código usando o javascript.">
+                </div>
+                <br>
+            </div>
+        </section>
+
+        <section class="secao">
+            <h2 class="subtitulo">🎯 Conclusão</h2>
+            <div class="description">
+                <p>
+                    As listas ligadas são úteis quando precisamos de inserções e remoções eficientes, sem precisar
+                    realocar toda a estrutura
+                    como acontece em arrays. <br>
+                    Porém, o acesso a um elemento específico pode ser mais lento, pois é necessário percorrer a
+                    lista até encontrá-lo. <br>
+                </p>
+                <br>
+            </div>
+        </section>
+
+        <section class="secao">
+            <h2 class="subtitulo">🚀 Quando Usar Listas Ligadas?</h2>
+            <div class="description">
+                <p>
+                    ✔ Quando precisa de inserção e remoção rápida sem realocar memória. <br>
+                    ✔ Quando os tamanhos dos dados são dinâmicos e desconhecidos. <br>
+                    ✔ Quando a ordem de inserção/importância dos dados muda com frequência. <br>
+                </p>
+            </div>
+        </section>
+
+        <section class="secao">
+            <h2 class="subtitulo">⚠️ Quando NÃO usar?</h2>
+            <div class="description">
+                <p>
+                    ❌ Se você precisa acessar elementos rapidamente por índice (arrays são mais rápidos). <br>
+                    ❌ Se a memória e cache são críticos (listas ligadas podem consumir mais memória devido aos ponteiros
+                    extras). <br>
+                </p>
+            </div>
+        </section>
+
+        <br>
+    </main>
+    <br>
+    <footer>
+        &copy; 2025 Giovani Teodoro Martins. Todos os direitos reservados.
+    </footer>
+    <script src="./listas_ligadas.js"></script>
+</body>
+
+</html>
